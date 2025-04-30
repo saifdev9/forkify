@@ -49,9 +49,11 @@ function Pagination({ count }) {
           disabled={page === count}
           onClick={nextPage}
           className="btn--inline pagination__btn--next"
+          end={true}
+          svgClassName="search__icon"
+          name="arrow-right"
         >
           <span>Page {page + 1}</span>
-          <Svg className="search__icon" name="arrow-right" />
         </Button>
       )}
     </div>

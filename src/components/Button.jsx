@@ -7,6 +7,7 @@ function Button({
   className,
   onClick,
   svgClassName,
+  end,
 }) {
   return (
     <button className={className} disabled={isLoading} onClick={onClick}>
@@ -16,6 +17,7 @@ function Button({
         <>
           {svgName && <Svg className={svgClassName} name={svgName} />}
           <span>{children}</span>
+          {end && svgName && <Svg className={svgClassName} name={svgName} />}
         </>
       )}
     </button>
