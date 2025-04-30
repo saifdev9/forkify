@@ -34,7 +34,7 @@ function RecipeDetails({ recipe }) {
 
   const isBookmarked = bookmarks?.map((bookmark) => bookmark.id).includes(id);
 
-  // console.log(recipe);
+  console.log(ingredients);
   // console.log(bookmarks);
 
   return (
@@ -101,7 +101,10 @@ function RecipeDetails({ recipe }) {
             <li key={i} className="recipe__ingredient">
               <Svg className="recipe__icon" name="check" />
               <div className="recipe__quantity">
-                {fracty((ingredient?.quantity * newServing) / recipe?.servings)}
+                {ingredient.quantity !== null &&
+                  fracty(
+                    (ingredient?.quantity * newServing) / recipe?.servings
+                  )}
               </div>
               <div className="recipe__description">
                 <span className="recipe__unit">{ingredient?.unit}</span>{" "}

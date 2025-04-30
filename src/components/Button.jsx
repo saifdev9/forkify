@@ -15,7 +15,7 @@ function Button({
         "Loading..."
       ) : (
         <>
-          {svgName && <Svg className={svgClassName} name={svgName} />}
+          {!end && svgName && <Svg className={svgClassName} name={svgName} />}
           <span>{children}</span>
           {end && svgName && <Svg className={svgClassName} name={svgName} />}
         </>

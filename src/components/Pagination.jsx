@@ -51,7 +51,7 @@ function Pagination({ count }) {
           className="btn--inline pagination__btn--next"
           end={true}
           svgClassName="search__icon"
-          name="arrow-right"
+          svgName="arrow-right"
         >
           <span>Page {page + 1}</span>
         </Button>

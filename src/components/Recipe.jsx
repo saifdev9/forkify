@@ -11,7 +11,12 @@ function Recipe() {
 
   return (
     <div className="recipe">
-      {!id && <Message msg="No recipe found!" svgName="smile" />}
+      {!id && (
+        <Message
+          msg="Search a recipe or Click on the list to see recipes!"
+          svgName="smile"
+        />
+      )}
       {id && errorRecipe?.message && <Error />}
       {id && isLoadingRecipe && <Spinner />}
 

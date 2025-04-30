@@ -249,6 +249,14 @@ body {
     fill: $color-primary;
     animation: rotate 2s infinite linear;
   }
+
+  p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #f48982;
+  }
 }
 
 @keyframes rotate {
